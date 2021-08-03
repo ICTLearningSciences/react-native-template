@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ReactNativeTemplate",
-    "slug": "ReactNativeTemplate",
+    "name": "rntest",
+    "slug": "rntest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,6 +17,7 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "edu.uscictlearn.rntest",
       "supportsTablet": true
     },
     "android": {
