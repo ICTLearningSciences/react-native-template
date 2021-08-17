@@ -104,7 +104,6 @@
 				9F438749BDDE6F290EDB2796 /* Pods-TestCiDeploy-TestCiDeployTests.debug.xcconfig */,
 				653F30E967C71CDAB7DD54F0 /* Pods-TestCiDeploy-TestCiDeployTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -432,6 +431,8 @@
 			baseConfigurationReference = 9F438749BDDE6F290EDB2796 /* Pods-TestCiDeploy-TestCiDeployTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -448,8 +449,9 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.usc.ict.*";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development edu.usc.ict.*";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCiDeploy.app/TestCiDeploy";
 			};
 			name = Debug;
@@ -459,6 +461,8 @@
 			baseConfigurationReference = 653F30E967C71CDAB7DD54F0 /* Pods-TestCiDeploy-TestCiDeployTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = TestCiDeployTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -472,8 +476,9 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.usc.ict.*";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development edu.usc.ict.*";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestCiDeploy.app/TestCiDeploy";
 			};
 			name = Release;
@@ -484,7 +489,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 21;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TestCiDeploy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,8 +503,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.usc.ict.*";
 				PRODUCT_NAME = TestCiDeploy;
+				PROVISIONING_PROFILE_SPECIFIER = "match Development edu.usc.ict.*";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -510,7 +518,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 21;
 				INFOPLIST_FILE = TestCiDeploy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,8 +531,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.usc.ict.*";
 				PRODUCT_NAME = TestCiDeploy;
+				PROVISIONING_PROFILE_SPECIFIER = "match Development edu.usc.ict.*";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
