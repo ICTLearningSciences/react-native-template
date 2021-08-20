@@ -6,7 +6,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.17.0]
+        node-version: [14.17.0]
 
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: yarn install
+        run: npm ci
 
       - name: Install pods
         run: cd ios && pod install
