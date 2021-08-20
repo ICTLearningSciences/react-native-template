@@ -33,6 +33,8 @@ jobs:
           CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
           DEVELOPER_TEAM_ID: ${{ secrets.DEVELOPER_TEAM_ID }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+          GIT_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          GIT_ACCESS_TOKEN_USER_NAME: ${{ secrets.GITHUB_ACCESS_TOKEN_USER_NAME }}
           GIT_REPO_URL: ${{ secrets.GIT_REPO_URL }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         run: fastlane ios beta

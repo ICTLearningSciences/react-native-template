@@ -69,8 +69,9 @@ platform :ios do
     match(
       app_identifier: ENV["APP_IDENTIFIER"],
       api_key: api_key,
-      git_url: ENV["GIT_REPO_URL"],
-      type: "development",
+      git_basic_authorization: Base64.strict_encode64("#{ENV["GITHUB_ACCESS_TOKEN_USER_NAME"]}:#{ENV["GITHUB_ACCESS_TOKEN"]}")
+      # git_url: ENV["GIT_REPO_URL"],
+      # type: "development",
       username: ENV["APPLE_ID"],
       team_id: ENV["DEVELOPER_TEAM_ID"],
       keychain_name: ENV["CI_KEYCHAIN_NAME"],
