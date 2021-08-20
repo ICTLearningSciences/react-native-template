@@ -48,14 +48,14 @@ platform :ios do
       :DEVELOPMENT_TEAM => MY_TEAM,
     }
 
-    # create_keychain(
-    #   name: ENV["CI_KEYCHAIN_NAME"],
-    #   password: ENV["CI_KEYCHAIN_PASSWORD"],
-    #   default_keychain: true,
-    #   unlock: true,
-    #   timeout: 3600,
-    #   lock_when_sleeps: false
-    # )
+    create_keychain(
+      name: ENV["CI_KEYCHAIN_NAME"],  # in ci can be anything
+      password: ENV["CI_KEYCHAIN_PASSWORD"],  # in ci can be anything
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false
+    )
 
     api_key = app_store_connect_api_key(
       key_id: ENV["APP_STORE_CONNECT_API_KEY_ID"],
@@ -66,7 +66,6 @@ platform :ios do
       in_house: false # optional but may be required if using match/sign
     )
 
-
     match(
       app_identifier: ENV["APP_IDENTIFIER"],
       api_key: api_key,
@@ -74,8 +73,8 @@ platform :ios do
       type: "development",
       username: ENV["APPLE_ID"],
       team_id: ENV["DEVELOPER_TEAM_ID"],
-      # keychain_name: ENV["CI_KEYCHAIN_NAME"],
-      # keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
       readonly: true
     )
 
