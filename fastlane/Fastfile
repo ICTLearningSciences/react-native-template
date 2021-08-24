@@ -28,10 +28,10 @@ platform :ios do
 
   private_lane :build do
     configuration_name = "Release"
-    export_options_method = "development"
+    export_options_method = "appstore"
     code_sign_identity = "iPhone Developer"
     MY_APP_ID = ENV["APP_IDENTIFIER"]
-    MY_PROFILE = "match Development #{ENV["APP_IDENTIFIER"]}"
+    MY_PROFILE = "match AppStore #{ENV["APP_IDENTIFIER"]}"
     MY_TEAM = ENV["DEVELOPER_TEAM_ID"]
 
     
@@ -70,8 +70,6 @@ platform :ios do
       app_identifier: ENV["APP_IDENTIFIER"],
       api_key: api_key,
       git_basic_authorization: Base64.strict_encode64("#{ENV["GIT_ACCESS_TOKEN_USER_NAME"]}:#{ENV["GIT_ACCESS_TOKEN"]}"),
-      # git_url: ENV["GIT_REPO_URL"],
-      # type: "development",
       username: ENV["APPLE_ID"],
       team_id: ENV["DEVELOPER_TEAM_ID"],
       keychain_name: "cibuild.keychain",
@@ -96,7 +94,7 @@ platform :ios do
       output_directory: OUTPUT_DIRECTORY,
       output_name: "#{PROJECT_NAME}.ipa",
       export_options: {
-        method: "development",
+        method: "appstore",
         signingStyle: "manual",
         provisioningProfiles: { 
             MY_APP_ID => MY_PROFILE
