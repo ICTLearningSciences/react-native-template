@@ -49,7 +49,7 @@ platform :ios do
     }
 
     create_keychain(
-      name: "login.keychain",  # in ci can be anything
+      name: "cibuild.keychain",  # in ci can be anything
       password: ENV["MATCH_PASSWORD"],  # in ci can be anything
       default_keychain: true,
       unlock: true,
@@ -74,7 +74,7 @@ platform :ios do
       # type: "development",
       username: ENV["APPLE_ID"],
       team_id: ENV["DEVELOPER_TEAM_ID"],
-      keychain_name: "login.keychain",
+      keychain_name: "cibuild.keychain",
       keychain_password: ENV["MATCH_PASSWORD"],
       readonly: true
     )
